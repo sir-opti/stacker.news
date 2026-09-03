@@ -315,6 +315,7 @@ services:
     build:
       context: ./docker/lnd
       args:
+        - LND_VERSION=${LND_VERSION}
         - LN_NODE_FOR=sn
     container_name: sn_lnd
     restart: unless-stopped
@@ -423,6 +424,7 @@ services:
     build:
       context: ./docker/lnd
       args:
+        - LND_VERSION=${LND_VERSION}
         - LN_NODE_FOR=stacker
     container_name: lnd
     restart: unless-stopped
@@ -663,6 +665,7 @@ services:
     build:
       context: ./docker/lnd
       args:
+        - LND_VERSION=${LND_VERSION}
         - LN_NODE_FOR=router
     container_name: router_lnd
     restart: unless-stopped
