@@ -397,7 +397,6 @@ services:
     restart: unless-stopped
     profiles:
       - lndk
-      - wallets
     depends_on:
       sn_lnd:
         condition: service_healthy
